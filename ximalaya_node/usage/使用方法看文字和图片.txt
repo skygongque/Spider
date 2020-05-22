@@ -1,0 +1,9 @@
+1.安装node.js环境
+https://nodejs.org/en/
+下载安装包双击，一路下一步
+
+2.修改config.json(用记事本打开)文件中的相关配置(youcookie和albumId)。
+    
+3.打开cmd并cd到spider.js所在目录(或者在spider.js所在目录按住shift右键在此处打开命令行)
+
+4.cmd中输入命令node spider.js回车开始下载
