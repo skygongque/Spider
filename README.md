@@ -2,4 +2,4 @@
 Spider
 
 
-(微博图片批量下载)[introduction/weibo.md]
+[微博图片批量](introduction/weibo.md)
