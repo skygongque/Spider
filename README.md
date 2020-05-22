@@ -1,4 +1,5 @@
-![pic](https://img.shields.io/badge/python-3.7-green)
+![pic](https://img.shields.io/badge/python-v3.7-green)
+![pic](https://img.shields.io/badge/node-v12.16-green)
 # 自己写的爬虫总结
 
 文章可能首次发表于吾爱破解论坛，以下是我在吾爱破解论坛的账号，证明原创
