@@ -92,7 +92,7 @@ async function get_one_page(albumId, pageNum, start_index) {
     var list = TracksList.data.tracks
     for (var i = 0; i < list.length; i++) {
         var title = list[i].title;
-        title = title.replace(/[&\|\\\*^%$'"#@\-]/g, "");
+        title = title.replace(/[&/|///*^%$'"#@/-]/g, "");
         var index = list[i].index;
         var trackId = list[i].trackId;
         if (index < start_index) {

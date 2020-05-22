@@ -79,7 +79,7 @@ def main():
     link_list = open_links()
     keys_name = list(link_list.keys())
     for title in keys_name:
-        title_modified = re.sub('[\\\/:\*\?\"<>|]','',title,re.S)
+        title_modified = re.sub('[////:/*/?/"<>|]','',title,re.S)
         print(title_modified)
         create_img_folder(title_modified+'_img')
         html = get_html(link_list[title])

@@ -82,8 +82,8 @@ class articlesSpider(object):
         article_infos = json.load(fp)
         for key, value in article_infos.items():
             print('[INFO]: 正在抓取文章 ——> %s' % key)
-            key = key.replace('\\', '').replace('/', '').replace(':', '').replace('：', '') \
-                     .replace('*', '').replace('?', '').replace('？', '').replace('“', '')  \
+            key = key.replace('//', '').replace('/', '').replace(':', '').replace('：', '') /
+                     .replace('*', '').replace('?', '').replace('？', '').replace('“', '')  /
                      .replace('"', '').replace('<', '').replace('>', '').replace('|', '_')
             pdfkit.from_url(value, os.path.join(self.savedir, key+'.pdf'), configuration=pdfkit.configuration(wkhtmltopdf=self.cfg.wkhtmltopdf_path))
         print('[INFO]: 已成功爬取目标公众号的所有文章内容...')

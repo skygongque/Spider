@@ -22,7 +22,7 @@ function mt(t) {
 mt.prototype = {
     cg_hun: function () {
         this._cgStr = "";
-        var t = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/\\:._-1234567890"
+        var t = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ///:._-1234567890"
             , e = t.length
             , n = 0;
         for (n = 0; n < e; n++) {

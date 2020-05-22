@@ -26,7 +26,7 @@ def MYretry(*exceptions, retries=3, cooldown=1, verbose=True):
                     result = await func(*args, **kwargs)
                 except exceptions as err:
                     retries_count += 1
-                    message = "Exception during {} execution. " \
+                    message = "Exception during {} execution. " /
                               "{} of {} retries attempted".format(func, retries_count, retries)
                     if retries_count > retries:
                         verbose and log.exception(message)

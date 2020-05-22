@@ -6,5 +6,5 @@
 [网易云音乐爬虫](introduction/netease_comments.md)
 --------
 
-[喜马拉雅有声书爬虫](introduction\ximalay_node.md)
+[喜马拉雅有声书爬虫](introduction/ximalay_node.md)
 ------
