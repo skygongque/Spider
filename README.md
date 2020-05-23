@@ -7,11 +7,11 @@ https://www.52pojie.cn/home.php?mod=space&uid=965057
 
 ## [微博模拟登录](introduction/weibo_login.md)
 
-RSA/PKCS1_v1_5
-用python的pycryptodome或rsa库都可以实现
-下载验证码图片手动输入结果（若有接码平台或机器学习训练的模型可以接入）
+RSA/PKCS1_v1_5  
+用python的pycryptodome或rsa库都可以实现  
+下载验证码图片手动输入结果（若有接码平台或机器学习训练的模型可以接入）  
 
-## [微博图片批量](introduction/weibo.md)
+## [微博图片批量下载](introduction/weibo.md)
 
 用asyncio + aiohttp异步下载图片  
 
