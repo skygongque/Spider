@@ -1,8 +1,12 @@
-# 介绍
+# 微博模型登录
 
 对于爬取少量的微博信息自己手动登录再copy一下cookie是最简单的方式
 而对于大规模的爬取，需要大量账号的登录，手动登录费时费力，模拟登录就有它的重要意义
 一般的做法是大量账号的模拟登录并保存cookie形成cookie池，提供爬虫使用
+
+RSA/PKCS1_v1_5
+用python的pycryptodome或rsa库都可以实现
+下载验证码图片手动输入结果（若有接码平台或机器学习训练的模型可以接入）
 
 
 代码参考https://github.com/CharlesPikachu/DecryptLogin/blob/master/DecryptLogin/platforms/weibo.py

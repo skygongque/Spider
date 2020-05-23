@@ -5,4 +5,4 @@
 
 用excejs 和 HTTP API (node.js + express)两种方法运行扣出来的js代码
 
-另外encparam,sencSecKey其实用到了AES加密和RSA加密，之前看到过完全逆向成python代码的，若利用漏洞可以跳过RSA加密的过程代码量其实相当少，并且也是最高效的。
+另外encparam,sencSecKey其实用到了AES加密和RSA加密，之前看到过完全逆向成python代码的，若利用漏洞可以跳过RSA加密的过程将更加高效。

@@ -24,16 +24,17 @@ RSA/nopading
 
 ## [网易云音乐下载](introduction/netease_music.md)
 
-nodejs express
-params和encSecKey参数
-直接扣代码补全缺少的环境即可
-Crypto-js库用npm安装
+nodejs express\n
+params和encSecKey参数\n
+直接扣代码补全缺少的环境即可\n
+Crypto-js库用npm安装\n
 
 ## [抖音web signature](https://github.com/skygongque/douyin_signature)
 
-nodejs express puppeteer
-1.得到指定uid请求返回的tac
-2.puppeteer驱动chromium在console中执行签名算法得到signature
+nodejs express puppeteer\n
+1.得到指定uid请求返回的tac\n
+2.puppeteer驱动chromium
+在console中执行签名算法得到signature
 
 # [喜马拉雅有声书爬虫](introduction/ximalay_node.md)
 
