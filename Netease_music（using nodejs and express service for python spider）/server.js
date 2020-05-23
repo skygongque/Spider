@@ -1,4 +1,4 @@
-// 作者@夜幕团队
+
 const express = require('express');
 const app = express();
 const encparams = require('./163');

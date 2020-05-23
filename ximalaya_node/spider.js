@@ -1,3 +1,5 @@
+/* 需要会员登录后的token，仅限vip，非vip的搜索一下一大把 */
+
 const superagent = require('superagent');
 const CryptoJS = require('crypto-js');
 const decrypt_xm = require('./ximalaya_decrypt');
