@@ -36,13 +36,13 @@ nodejs express puppeteer
 2.puppeteer驱动chromium  
 在console中执行签名算法得到signature  
 
-# [喜马拉雅有声书爬虫](introduction/ximalay_node.md)
+## [喜马拉雅有声书爬虫](introduction/ximalay_node.md)
 
 纯JavaScript爬虫  
 通过fileId和ep等参数还原真实地址  
 直接扣代码即可  
 
-# [喜马拉雅模拟登录](https://github.com/skygongque/login-ximalaya)
+## [喜马拉雅模拟登录](https://github.com/skygongque/login-ximalaya)
 opencv-python 识别滑块验证码的缺口识别成功率约 60-70%  
 参考腾讯防水墙缺口的识别算法简单修改
 因为喜马拉雅滑块没有检测轨迹，只对post的缺口位置经过简单的偏移  
