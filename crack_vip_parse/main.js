@@ -27,70 +27,70 @@ function time() {
     var _0x2a8c80 = new Date()["getTime"]();
     return _0x203c30["QsVwb"](parseInt, _0x203c30["VEGIp"](_0x2a8c80, 0x3e8));
 }
-console.log(time())
+// console.log(time())
 
-    ; got = function (_0x4233e5) {
-        var _0x41aa1f = {
-            'UVyhF': function (_0x14c943, _0x20a265) {
-                return _0x14c943(_0x20a265);
-            },
-            'pWIEc': function (_0x1b96e5, _0x2b59a2) {
-                return _0x1b96e5 + _0x2b59a2;
-            },
-            'MKpOV': "daheiyun1888",
-            'NDWbW': "221",
-            'QNEJU': function (_0x2a9536, _0x929c7c) {
-                return _0x2a9536 > _0x929c7c;
-            },
-            'ukHSg': "jiexi.shunyiwenxiu.com",
-            'VAXwx': function (_0x4e1d4b, _0x2a6747) {
-                return _0x4e1d4b === _0x2a6747;
-            },
-            'bgnFP': "GPEdE",
-            'DZUyM': function (_0x12bbcc, _0x5bf4b3) {
-                return _0x12bbcc(_0x5bf4b3);
-            },
-            'RfjiM': function (_0x3e667c, _0x46c0da) {
-                return _0x3e667c !== _0x46c0da;
-            },
-            'XaotG': "pOgik",
-            'utZzg': "rcCBy",
-            'XtzVr': function (_0x3b8d61, _0x33798d) {
-                return _0x3b8d61(_0x33798d);
-            },
-            'lelxh': function (_0x34b284, _0x1e5ccb) {
-                return _0x34b284 + _0x1e5ccb;
-            }
-        };
-        var _0x489eeb = _0x41aa1f["MKpOV"];
-        // console.log(_0x489eeb);
-        // daheiyun1888
-        // 221
-        var _0x192279 = _0x41aa1f["NDWbW"];
-        // console.log(_0x192279);
-        var _0x4047f5 = "jiexi.shunyiwenxiu.com";
-        if (_0x41aa1f["QNEJU"](_0x4047f5["indexOf"](_0x41aa1f["ukHSg"]), -0x1)) {
-            if (_0x41aa1f["VAXwx"](_0x41aa1f["bgnFP"], _0x41aa1f["bgnFP"])) {
-                // var _0x46de7c = _0x41aa1f["DZUyM"](md5, _0x41aa1f["pWIEc"](_0x4233e5, _0x489eeb));
-                var _0x46de7c = CryptoJS.MD5(_0x4233e5 + _0x489eeb).toString();
-                console.log(_0x489eeb)
-                console.log(1)
-            }
-            // else {
-            //     var _0x499a5d = _0x41aa1f[_0x5aa4('17', 'zJ99')](md5, _0x41aa1f[_0x5aa4('18', 'XLp&')](_0x4233e5, _0x192279));
-            // }
-        } else {
-            if (_0x41aa1f["RfjiM"](_0x41aa1f["XaotG"], _0x41aa1f["utZzg"])) {
-                var _0x46de7c = CryptoJS.MD5(_0x4233e5 + _0x192279).toString();
-                console.log(2)
-                // var _0x46de7c = _0x41aa1f["XtzVr"](md5, _0x41aa1f["lelxh"](_0x4233e5, _0x192279));
-            } else {
-                ooe["href"] = _0x41aa1f["pWIEc"](_0x41aa1f["pWIEc"](ooe["href"], '?'), i);
-                console.log(3)
-            }
+; got = function (_0x4233e5) {
+    var _0x41aa1f = {
+        'UVyhF': function (_0x14c943, _0x20a265) {
+            return _0x14c943(_0x20a265);
+        },
+        'pWIEc': function (_0x1b96e5, _0x2b59a2) {
+            return _0x1b96e5 + _0x2b59a2;
+        },
+        'MKpOV': "daheiyun1888",
+        'NDWbW': "221",
+        'QNEJU': function (_0x2a9536, _0x929c7c) {
+            return _0x2a9536 > _0x929c7c;
+        },
+        'ukHSg': "jiexi.shunyiwenxiu.com",
+        'VAXwx': function (_0x4e1d4b, _0x2a6747) {
+            return _0x4e1d4b === _0x2a6747;
+        },
+        'bgnFP': "GPEdE",
+        'DZUyM': function (_0x12bbcc, _0x5bf4b3) {
+            return _0x12bbcc(_0x5bf4b3);
+        },
+        'RfjiM': function (_0x3e667c, _0x46c0da) {
+            return _0x3e667c !== _0x46c0da;
+        },
+        'XaotG': "pOgik",
+        'utZzg': "rcCBy",
+        'XtzVr': function (_0x3b8d61, _0x33798d) {
+            return _0x3b8d61(_0x33798d);
+        },
+        'lelxh': function (_0x34b284, _0x1e5ccb) {
+            return _0x34b284 + _0x1e5ccb;
         }
-        return _0x46de7c;
+    };
+    var _0x489eeb = _0x41aa1f["MKpOV"];
+    // console.log(_0x489eeb);
+    // daheiyun1888
+    // 221
+    var _0x192279 = _0x41aa1f["NDWbW"];
+    // console.log(_0x192279);
+    var _0x4047f5 = "jiexi.shunyiwenxiu.com";
+    if (_0x41aa1f["QNEJU"](_0x4047f5["indexOf"](_0x41aa1f["ukHSg"]), -0x1)) {
+        if (_0x41aa1f["VAXwx"](_0x41aa1f["bgnFP"], _0x41aa1f["bgnFP"])) {
+            // var _0x46de7c = _0x41aa1f["DZUyM"](md5, _0x41aa1f["pWIEc"](_0x4233e5, _0x489eeb));
+            var _0x46de7c = CryptoJS.MD5(_0x4233e5 + _0x489eeb).toString();
+            console.log(_0x489eeb)
+            console.log(1)
+        }
+        // else {
+        //     var _0x499a5d = _0x41aa1f[_0x5aa4('17', 'zJ99')](md5, _0x41aa1f[_0x5aa4('18', 'XLp&')](_0x4233e5, _0x192279));
+        // }
+    } else {
+        if (_0x41aa1f["RfjiM"](_0x41aa1f["XaotG"], _0x41aa1f["utZzg"])) {
+            var _0x46de7c = CryptoJS.MD5(_0x4233e5 + _0x192279).toString();
+            console.log(2)
+            // var _0x46de7c = _0x41aa1f["XtzVr"](md5, _0x41aa1f["lelxh"](_0x4233e5, _0x192279));
+        } else {
+            ooe["href"] = _0x41aa1f["pWIEc"](_0x41aa1f["pWIEc"](ooe["href"], '?'), i);
+            console.log(3)
+        }
     }
+    return _0x46de7c;
+}
 
 function got221(x) {
     return CryptoJS.MD5(x + "221").toString();
@@ -156,17 +156,16 @@ var url = "https://v.youku.com/v_show/id_XMTA3MDAzNDA0.html"
 // "wskjsdhfk"
 // "daheiyun1888"
 // "221"
-console.log("got2", got2("https://www.iqiyi.com/v_19rzj6uadg.html1594995936daheiyunjiexi0614"))
+// console.log("got2", got2("https://www.iqiyi.com/v_19rzj6uadg.html1594995936daheiyunjiexi0614"))
 // var key = got_wskjsdhfk(got_wskjsdhfk(url + time() + "daheiyunjiexi0614"));
 
 var key = got_daheiyun1888(got_daheiyun1888(url + time() + "daheiyunjiexi0614"));
-
 
 // var key = got2(got2(url +1595038965 + "daheiyunjiexi0614"));
 
 function get_token(text) {
     // return CryptoJS.MD5(text + "shibai").toString();
-    return CryptoJS.MD5(text+"_wp6f").toString();
+    return CryptoJS.MD5(text + "_wp6f").toString();
     // _wp6f
     // return CryptoJS.MD5(text + "wslkwodfiejkhf").toString();
 };
