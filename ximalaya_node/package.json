@@ -4,13 +4,13 @@
   "description": "",
   "main": "spider.js",
   "scripts": {
-    "test": "echo /"Error: no test specified/" && exit 1"
+    "test": "node spider.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "crypto-js": "^4.0.0",
-    "superagent": "^5.2.2"
+    "superagent": "^5.3.1"
   }
 }

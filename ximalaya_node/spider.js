@@ -2,7 +2,7 @@
 
 const superagent = require('superagent');
 const CryptoJS = require('crypto-js');
-const decrypt_xm = require('./ximalaya_decrypt');
+const decrypt_xm = require('./ximalaya_decrypt2');
 const fs = require('fs');
 
 

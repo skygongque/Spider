@@ -1,5 +1,41 @@
-/* https://mpay.ximalaya.com/mobile/track/pay/返回数据解密 */
-function vt(t, e) {
+/* 2020.7.19更新 */
+var J = function (t) {
+    if (Array.isArray(t))
+        return t
+}
+    , Z = function (t, e) {
+        var n = []
+            , r = !0
+            , o = !1
+            , i = void 0;
+        try {
+            for (var a, u = t[Symbol.iterator](); !(r = (a = u.next()).done) && (n.push(a.value),
+                !e || n.length !== e); r = !0)
+                ;
+        } catch (t) {
+            o = !0,
+                i = t
+        } finally {
+            try {
+                r || null == u.return || u.return()
+            } finally {
+                if (o)
+                    throw i
+            }
+        }
+        return n
+    }
+    , tt = function () {
+        throw new TypeError("Invalid attempt to destructure non-iterable instance")
+    }
+    , et = function (t, e) {
+        return J(t) || Z(t, e) || tt()
+    }
+    , nt = function (t) {
+        return JSON.parse(JSON.stringify(t))
+    };
+
+function gt(t, e) {
     for (var n, r = [], o = 0, i = "", a = 0; 256 > a; a++)
         r[a] = a;
     for (a = 0; 256 > a; a++)
@@ -15,14 +51,14 @@ function vt(t, e) {
             i += String.fromCharCode(e.charCodeAt(u) ^ r[(r[a] + r[o]) % 256]);
     return i
 }
-function mt(t) {
+function bt(t) {
     this._randomSeed = t,
         this.cg_hun()
 }
-mt.prototype = {
+bt.prototype = {
     cg_hun: function () {
         this._cgStr = "";
-        var t = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ///:._-1234567890"
+        var t = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/\\:._-1234567890"
             , e = t.length
             , n = 0;
         for (n = 0; n < e; n++) {
@@ -55,11 +91,10 @@ mt.prototype = {
         return e
     }
 };
-// var gt = vt("xm", "test")
-var gt = vt("xm", "Ä[ÜJ=Û3Áf÷N")
-    , bt = [19, 1, 4, 7, 30, 14, 28, 8, 24, 17, 6, 35, 34, 16, 9, 10, 13, 22, 32, 29, 31, 21, 18, 3, 2, 23, 25, 27, 11, 20, 5, 15, 12, 0, 33, 26]
-    , wt = function (t) {
-        var e = vt(function (t, e) {
+var wt = gt("xm", "Ä[ÜJ=Û3Áf÷N")
+    , Et = [19, 1, 4, 7, 30, 14, 28, 8, 24, 17, 6, 35, 34, 16, 9, 10, 13, 22, 32, 29, 31, 21, 18, 3, 2, 23, 25, 27, 11, 20, 5, 15, 12, 0, 33, 26]
+    , Tt = function (t) {
+        var e = gt(function (t, e) {
             for (var n = [], r = 0; r < t.length; r++) {
                 for (var o = "a" <= t[r] && "z" >= t[r] ? t[r].charCodeAt() - 97 : t[r].charCodeAt() - "0".charCodeAt() + 26, i = 0; 36 > i; i++)
                     if (e[i] == o) {
@@ -69,7 +104,7 @@ var gt = vt("xm", "Ä[ÜJ=Û3Áf÷N")
                 n[r] = 25 < o ? String.fromCharCode(o - 26 + "0".charCodeAt()) : String.fromCharCode(o + 97)
             }
             return n.join("")
-        }("d" + gt + "9", bt), function (t) {
+        }("d" + wt + "9", Et), function (t) {
             if (!t)
                 return "";
             var e, n, r, o, i, a = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1];
@@ -102,41 +137,60 @@ var gt = vt("xm", "Ä[ÜJ=Û3Áf÷N")
             }
             return i
         }(t)).split("-")
-            , n = e
-            // , n = tt(e, 4)
+            , n = et(e, 4)
             , r = n[0];
-return {
-    sign: n[1],
-    buy_key: r,
-    token: n[2],
-    timestamp: n[3]
-}
+        return {
+            sign: n[1],
+            buy_key: r,
+            token: n[2],
+            timestamp: n[3]
+        }
     }
-// var domain = 'http://audiopay.cos.xmcdn.com/download/1.0.0'
-// var seed = 5142;
-// var fileId ="25*56*15*1*66*9*24*14*23*35*24*57*31*24*44*35*24*6*16*25*14*49*62*9*49*14*58*48*51*33*65*31*48*32*17*4*6*2*28*18*44*28*40*35*9*53*35*5*26*35*0*"
-// var ep = "20NvOoh6T39X3qwKO4cY5g5bVhg+hiHATYEfcg/nBiutm7je2vuNz+sG1vjZ0aNlDOB10XIYfKJo2+z+xg0X270bPyhV";
-// var duration = 1517;
-function get_sign_token_etc(ep){
-    return wt(ep);
-}
 
-function get_whole_url(res){
-    var res = JSON.parse(res)
-    var domain = res['domain'] +'/download/'+res['apiVersion'];
-    var seed = res['seed'];
-    var fileId = res['fileId'];
-    var ep = res['ep'];
-    var duration = res['duration'];
-    var n = new mt(seed).cg_fun(fileId);
+
+// var info = {
+//     albumId: 2910554,
+//     apiVersion: "1.0.0",
+//     authorizedType: 1,
+//     buyKey: "617574686f72697a6564",
+//     domain: "http://audiopay.cos.xmcdn.com",
+//     downloadQualityLevel: 1,
+//     duration: 1244,
+//     ep: "20NvOoh6T39X3qwKO4cY5g5bVhg+gnLGS4Mce1ywDy2pmeiI3q+JneRc0f6I0qUzC+F10iAYfaVg2ez+xgwQ2rsQOCBS",
+//     fileId: "19*7*20*16*24*1*56*55*28*38*56*25*64*56*37*28*56*22*43*19*2*65*49*12*13*50*41*5*0*10*49*49*8*35*34*59*38*59*41*63*48*65*59*6*1*25*21*17*59*38*30*",
+//     highestQualityLevel: 2,
+//     isAuthorized: true,
+//     msg: "0",
+//     ret: 0,
+//     sampleDuration: 180,
+//     sampleLength: 1559877,
+//     seed: 1136,
+//     title: "《唐砖》918",
+//     totalLength: 10074267,
+//     trackId: 22188799,
+//     uid: 25256063,
+// };
+
+// var seed = info.seed;
+// var fileId = info.fileId;
+// var duration = info.duration;
+function get_whole_url(info) {
+    var info = JSON.parse(info)
+    var seed = info.seed;
+    var fileId = info.fileId;
+    var duration = info.duration;
+    var n = new bt(seed).cg_fun(fileId);
     var address = "/" === n[0] ? n : "/".concat(n);
-    var params = get_sign_token_etc(ep);
-    return domain + address +'?sign='+params['sign'].toString()+'&buy_key='+params['buy_key']+'&token='+params['token']+'&timestamp='+params['timestamp']+'&duration='+duration
-}
+    // console.log(address);
+    var sign_etc = Tt(info.ep);
+    // console.log(sign_etc);
+    var whole_address1 = "".concat("https://audiopay.cos.xmcdn.com", "/download/").concat("1.0.0").concat(address)
+    var whole_address = "".concat(whole_address1, "?").concat(`sign=${sign_etc.sign}&buy_key=${sign_etc.buy_key}&token=${sign_etc.token}&timestamp=${sign_etc.timestamp}&duration=${duration}`);
+    // console.log(whole_address);
+    return whole_address;
+};
 
-module.exports={
+// console.log(get_whole_url(JSON.stringify(info)));
+module.exports = {
     get_whole_url
 }
-// var whole_url = get_whole_url(domain,seed,fileId,ep,duration);
-// console.log(whole_url)
-
