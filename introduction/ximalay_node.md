@@ -21,18 +21,18 @@ npm install
 npm install
 ```
 
-![](../ximalaya_node/usage/00.png)
+![图片未加载](../ximalaya_node/usage/00.png)
 2. 配置文件打开方法  
-   ![](../ximalaya_node/usage/01.png)
+   ![图片未加载](../ximalaya_node/usage/01.png)
 
 3. 复制1&_token的value值（**图02**） 
-   ![](../ximalaya_node/usage/02.png)
+   ![图片未加载](../ximalaya_node/usage/02.png)
 
 4. 更改配置文件  
-   ![](../ximalaya_node/usage/03.png)
+   ![图片未加载](../ximalaya_node/usage/03.png)
 
 5. 打开cmd  
-   ![](../ximalaya_node/usage/04.png)
+   ![图片未加载](../ximalaya_node/usage/04.png)
 
 6. 开始下载
    ximalaya_node目录下cmd命令
@@ -40,7 +40,7 @@ npm install
 ```cmd
 node spider.js
 ```
- ![](../ximalaya_node/usage/05.png)
+ ![图片未加载](../ximalaya_node/usage/05.png)
 
 
 
