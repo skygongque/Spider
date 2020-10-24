@@ -52,5 +52,10 @@ opencv-python 识别滑块验证码的缺口识别成功率约 60-70%
 密码加密RSA
 有浏览器指纹  
 
+## 豆瓣app _sig
+> frida 简单使用
+[安装frida环境](./frida_demo/installFrida.md)  
+[豆瓣app _sig hook](./frida_demo/doubanAppSigHook.md)  
+
 
 
