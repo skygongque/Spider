@@ -7,7 +7,7 @@
 ## a3 经过了hamchash 密钥是str4（关键）
 ![](./pictures/03.png)
 
-## str4 的获得比较麻烦使用使用frida hook
+## str4 的获得比较麻烦使用frida hook
 ```
 setImmediate(function(){
     Java.perform(function(){
