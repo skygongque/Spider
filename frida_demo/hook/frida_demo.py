@@ -1,11 +1,5 @@
 import frida
 import sys
-""" 
-夜神模拟器 adb connect 127.0.0.1:62001
-逍遥模拟器 adb connect 127.0.0.1:21503
-木木模拟器 adb connect 127.0.0.1:7555
-
-"""
 
 device = frida.get_remote_device()
 # 豆瓣的包名

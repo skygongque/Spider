@@ -1,13 +1,14 @@
-## 搜索关键字"_sig"
+## 分析过程
+### 搜索关键字"_sig"
 ![](./pictures/01.png)  
 
-## 发现_sig 是a3
+### 发现_sig 是a3
 ![](./pictures/02.png)  
 
-## a3 经过了hamchash 密钥是str4（关键）
+### a3 经过了hmachash 密钥是str4（关键）
 ![](./pictures/03.png)
 
-## str4 的获得比较麻烦使用frida hook
+### str4 的获得比较麻烦使用frida hook
 ```
 setImmediate(function(){
     Java.perform(function(){
@@ -27,6 +28,6 @@ setImmediate(function(){
 
 ```
 
-## 最终效果
+### 最终效果
 ![](pictures/success.png)
 

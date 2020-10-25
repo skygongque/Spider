@@ -6,7 +6,7 @@ setImmediate(function () {
         var ApiSignatureHelper = Java.use("com.douban.frodo.network.ApiSignatureHelper");
         var Pair = Java.use("android.util.Pair");
         send(ApiSignatureHelper);
-        // hook 这个类的a 方法
+        // hook 这个类的a 方法 如果有多个重载的方法通过overload 传入变量的类型
         ApiSignatureHelper.a.overload('java.lang.String', 'java.lang.String', 'java.lang.String').implementation = function (str1, str2, str3) {
             send(str1);
             send(str2);
@@ -17,20 +17,5 @@ setImmediate(function () {
             send(args_x.toString());
             return result;
         };
-        // frodo.douban.com/api/v2/
-        // var StringBuilder = Java.use('java.lang.StringBuilder');
-        // var toString = StringBuilder.toString;
-        // toString.implementation = function () {
-        //     var result = toString.call(this);
-        //     var partial = '';
-        //     if (result !== null) {
-        //         partial = result.toString().replace('\n', '');
-        //     }
-        //     // hook StringBuilder的toString方法，并通过正则筛选要打印的信息
-        //     if (partial.search('frodo.douban.com/api/v2/elendil/query_content' != -1)) {
-        //         console.log('StringBuilder.toString(); => ' + partial);
-        //     }
-        //     return result;
-        // };
     });
 });

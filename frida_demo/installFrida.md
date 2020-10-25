@@ -1,13 +1,13 @@
-[1.豆瓣_sig参数逆向](./doubanAppSigHook.md)
-
 # frida 环境搭建
+
 > https://www.jianshu.com/p/8118c4842408
 
-## 根据CPU架构选择frida-server
-下载地址：https://github.com/frida/frida/releases
+## 1.根据CPU架构选择frida-server
+下载地址：https://github.com/frida/frida/releases 
+
 ![](./pictures/frida_verson.png)
 
-## 连接安卓模拟器
+## 2.连接安卓模拟器
 ```
 adb connect 127.0.0.1:port
 ```
@@ -15,7 +15,7 @@ adb connect 127.0.0.1:port
 > 逍遥模拟器 adb connect 127.0.0.1:21503  
 > 木木模拟器 adb connect 127.0.0.1:7555  
 
-## 安装安卓模拟器逆向环境
+## 3.安装安卓模拟器逆向环境
 
 将下载好的frida-server 推入安卓模拟器中
 这里使用的是`逍遥模拟器`
@@ -36,13 +36,13 @@ ls -all
 ./frida-server-14.0.1-android-x86
 ```
 
-## PC端安装python的包
+## 4.PC端安装python的包
 ```
 # pip安装组件
 pip install frida
 pip install frida-tools 
 ```
-## PC端验证 frida-server 是否成功
+## 5.PC端验证 frida-server 是否成功
 ```
 # 端口转发
 adb forward tcp:27042 tcp:27042
@@ -54,4 +54,9 @@ frida-ps -U
 ```
 
 至此frida的环境搭建完成
-![](./pictures/frida_cir.png)
+
+# ![](./pictures/frida_cir.png)
+
+# frida 简单使用
+
+[1.豆瓣_sig参数逆向](./doubanAppSigHook.md)
