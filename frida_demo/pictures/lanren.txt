@@ -1,0 +1,5 @@
+加密前:/yyting/system/config.action?imei=TEFaWS1mNjg5NDhhODMzZWM=&lastVersion=0&nwt=1&q=352&token=9slK-44QdMrP1SZKF6GjFg**_b7NA-BZtfXAP8ITmtQsPXA**iJ0DgxmdC83#I&j@iwg
+[+] 加密后:e8bf7d285c06c7725449c64039fd1dfd
+
+salt
+iJ0DgxmdC83#I&j@iwg
