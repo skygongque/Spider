@@ -1,6 +1,6 @@
 # requests
 
-## requests 保证cookies到json文件
+## requests 保存cookies到json文件
 ```
 # 省略了用session进行登录的代码
 # 保存cookies
