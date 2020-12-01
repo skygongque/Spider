@@ -43,3 +43,37 @@ s.cookies.update(jar)
 
 
 > https://cloud.tencent.com/developer/article/1616038
+
+
+## requests 复杂数据的post 如B站的字幕上传接口  
+注意需要字符串的需要json.dumps  
+但是整个payload不需要json.dumps,传入requests.post的data会自动进行urlencode编码
+```
+url = "https://api.bilibili.com/x/v2/dm/subtitle/draft/save"
+payload = {
+    "type": 1,
+    "oid": cid,
+    # 'oid': 257842077,
+    "lan": "en",
+    # subtitleData 已经是json.dumps之后的字符串
+    "data": subtitleData,
+    "submit": "true",
+    "sign": "false",
+    "csrf": "",
+    "bvid": bvid
+    # 'bvid': 'BV1Qa4y1p7hg'
+}
+headers = {
+    'authority': 'api.bilibili.com',
+    'accept': 'application/json, text/plain, */*',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36',
+    'content-type': 'application/x-www-form-urlencoded',
+    # 'content-type': 'application/json',
+    'origin': 'https://account.bilibili.com',
+    'referer': 'https://account.bilibili.com/subtitle/edit/',
+    'accept-language': 'zh-CN,zh;q=0.9,en-GB;q=0.8,en;q=0.7',
+    'cookie': ''
+}
+response = requests.request("POST", url, headers=headers, data=payload)
+print(response.text)
+```
