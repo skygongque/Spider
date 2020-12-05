@@ -24,7 +24,8 @@ class Async_download:
         async with self.semaphore:
             # try:
             print('getting', url)
-            async with self.session.get(url) as response:
+            # 添加ssl=False 防止SSLCertVerificationError 
+            async with self.session.get(url,ssl=False) as response:
                 await asyncio.sleep(1)
                 return await response.read()
             # except client_exceptions.ServerDisconnectedError:
