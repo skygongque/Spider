@@ -3,7 +3,11 @@ import json
 from pyquery import PyQuery as pq
 import os
 import re
+from pictureDownloader.picturedown import AsyncDownloader
+import asyncio
 
+
+loop = asyncio.get_event_loop()
 
 def open_links():
     with open('articleLinks.json', 'r', encoding='utf-8') as f:
@@ -32,22 +36,30 @@ def create_img_folder(name):
 
 
 def parse_detail(html, title):
+    """
+    调整图片的属性为可见，使用 asyncio + aiohttp 异步下载图片
+    """
     doc = pq(html)
-    # <div class="rich_media_content " id="js_content" style="visibility: hidden;">
     js_content = doc.find('#js_content')
     js_content.attr('style', "visibility: visible;")
     rich_pages = doc.find('.rich_pages')
-    count = 0
-    print('start to save img...')
-    for each in rich_pages.items():
-        count += 1
+    url_list = []
+    for count,each in enumerate(rich_pages.items()):
         origin_src = each.attr['data-src']
-        src_name = str(count)+'.png'
+        url_list.append(origin_src)
+        src_name = str(count).zfill(4)+'.png'
         src_name = os.path.join(title+'_img', src_name)
         each.attr('data-src', src_name)
         each.attr('src', src_name)
-        downlord_png(src_name, origin_src)
-        # print(each)
+        # downlord_png(src_name, origin_src)
+    # 改为异步下载图片 提高效率
+    print('start to save img...')
+    save_path = title+'_img'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    ad = AsyncDownloader(save_path)
+    # 把任务推入事件循环
+    loop.run_until_complete(ad.asyncTasks(url_list))
     content = doc('.rich_media_area_primary_inner').html()
     js_code = '''
 <script>
