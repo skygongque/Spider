@@ -5,12 +5,12 @@ import json
 import os
 import time
 from aiohttp import client_exceptions
-from MYretry import *
+from asyncFunctionRetry import *
 
 loop = asyncio.get_event_loop()
 
 
-class Async_download:
+class AsyncDownloader:
     def __init__(self):
         super().__init__()
         self.CONCURRENCY = 5
@@ -19,17 +19,14 @@ class Async_download:
         self.save_path = 'result'
     
     """ 利用python装饰器实现请求的重试 """
-    @MYretry(client_exceptions.ServerDisconnectedError)
+    @asyncFunctionRetry(client_exceptions.ServerDisconnectedError)
     async def request(self, url):
         async with self.semaphore:
-            # try:
             print('getting', url)
             # 添加ssl=False 防止SSLCertVerificationError 
             async with self.session.get(url,ssl=False) as response:
                 await asyncio.sleep(1)
                 return await response.read()
-            # except client_exceptions.ServerDisconnectedError:
-            #     print('ServerDisconnectedError occurred while scraping ',url)
 
     def save_pic(self, name, content):
         # 同步的写入文件
@@ -83,6 +80,6 @@ class Async_download:
 
 if __name__ == "__main__":
     start_time = time.time()
-    spider = Async_download()
+    spider = AsyncDownloader()
     spider.run()
     print('cost', time.time()-start_time)
