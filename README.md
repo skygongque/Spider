@@ -96,4 +96,8 @@ opencv-python 识别滑块验证码的缺口识别成功率约 60-70%
 [豆瓣app _sig 分析](./frida_demo/doubanAppSigHook.md)    
 [frida 相关代码总结](./frida_demo/hooksnippets.md)  
 
+## 猫眼电影字体反爬
+[猫眼电影字体反爬](https://github.com/skygongque/knn-font)  
+使用knn（k近邻算法）  
+字体文件的标注使用font creator 软件  
 
