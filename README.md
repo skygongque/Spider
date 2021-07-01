@@ -5,24 +5,24 @@
 文章可能首次发表于吾爱破解论坛，以下账户也是本人  
 https://www.52pojie.cn/home.php?mod=space&uid=965057
 
-## [微博模拟登录](introduction/weibo_login.md)
+## [微博模拟登录](微博登录/introduction.MD)
 
 RSA/PKCS1_v1_5  
 用python的pycryptodome或rsa库都可以实现  
 下载验证码图片手动输入结果 可以接入深度学习的[验证码识别模型](https://github.com/skygongque/captcha-weibo)准确率98%以上  
 
-## [微博图片批量下载](introduction/weibo.md)
+## [微博图片批量下载](微博图片)
 
 用asyncio + aiohttp异步下载图片  
 
-## [网易云音乐评论爬虫](introduction/netease_comments.md)
+## [网易云音乐评论爬虫](网易音乐评论)
 
 params和encSecKey参数  
 AES/CBC  
 `pad = lambda s: s + (16 - len(s) % 16) * chr(16 - len(s) % 16)`  
 RSA/nopading  
 
-## [网易云音乐下载](introduction/netease_music.md)
+## [网易云音乐下载](网易音乐)
 
 nodejs express  
 params和encSecKey参数  
@@ -73,7 +73,7 @@ window = {
 2.puppeteer驱动chromium  
 在console中执行签名算法得到signature~~ 
 
-## [喜马拉雅有声书爬虫](introduction/ximalay_node.md)
+## [喜马拉雅有声书爬虫](喜马拉雅)
 
 纯JavaScript爬虫  
 通过fileId和ep等参数还原真实地址  
@@ -92,12 +92,17 @@ opencv-python 识别滑块验证码的缺口识别成功率约 60-70%
 ## 豆瓣app _sig
 > frida 简单使用  
 
-[安装frida环境](./frida_demo/installFrida.md)   
-[豆瓣app _sig 分析](./frida_demo/doubanAppSigHook.md)    
-[frida 相关代码总结](./frida_demo/hooksnippets.md)  
+[安装frida环境](./Frida Demo/installFrida.md)   
+[豆瓣app _sig 分析](./Frida Demo/doubanAppSigHook.md)    
+[frida 相关代码总结](./Frida Demo/hooksnippets.md)  
 
 ## 猫眼电影字体反爬
 [猫眼电影字体反爬](https://github.com/skygongque/knn-font)  
 使用knn（k近邻算法）  
-字体文件的标注使用font creator 软件  
+字体文件的标注使用font creator 软件 
+
+
+## 百度翻译
+[百度翻译](19-百度翻译/fanyiBaidu.MD)  
+
 

@@ -11,7 +11,7 @@ aHR0cHM6Ly90b3VzdS5zaW5hLmNvbS5jbi9jb21wYW55L3ZpZXcvP2NvdWlkPTYyNDQyMTEzNzU=
 https://mp.weixin.qq.com/s/t2eoaLKuqqBRwR1dLiw3hw
 ```
 
-SHA256 哈希 sigature
+SHA256 哈希 signature
 
 ```
 ts: u,// timestamp

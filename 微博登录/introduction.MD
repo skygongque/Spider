@@ -1,13 +1,13 @@
-介绍
+## 介绍
 对于爬取少量的微博信息自己手动登录再copy一下cookie是最简单的方式
 而对于大规模的爬取，需要大量账号的登录，手动登录费时费力，模拟登录就有它的重要意义
 一般的做法是大量账号的模拟登录并保存cookie形成cookie池，提供爬虫使用
 
-模拟登录新浪微博
+## 模拟登录新浪微博
 代码参考https://github.com/CharlesPikachu/DecryptLogin/blob/master/DecryptLogin/platforms/weibo.py
 通过新浪通行证的登录来登录微博https://login.sina.com.cn/signup/signin.php
 
-登录过程
+## 登录过程
 1.预登录，向prelogin_url(https://login.sina.com.cn/sso/prelogin.php)发起get请求得到rsa加密的参数
     该请求的核心参数
     su  为用户名的base64加密
@@ -27,6 +27,6 @@
 3.请求login_url(https://passport.weibo.com/wbsso/login)
     需要携带的核心参数ticket, ssosavestate，均为post请求的返回值
 
-有验证码的情况
+## 有验证码的情况
 这个例子中是人工识别的
 其他方法是接入打码平台，或者cnn（卷积神经网络）训练模型识别（这是人工智能中计算机视觉的内容，还不会）
