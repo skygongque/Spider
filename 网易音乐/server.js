@@ -1,12 +1,11 @@
-
 const express = require('express');
 const app = express();
 const encparams = require('./163');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 app.use(bodyParser());
 
-app.post('/encrpt',function(req,res){
+app.post('/encrypt',function(req,res){
     var request = req.body;
     console.log('收到客户端消息',request);
     var result = encparams.get_params(request['ids']);

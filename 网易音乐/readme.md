@@ -1,14 +1,22 @@
-/* 引入crypto-js 用于aes加密 */
-var CryptoJS = require('crypto-js');
-function RSAKeyPair(a, b, c) {
-    this.e = biFromHex(a),
-    this.d = biFromHex(b),
-    this.m = biFromHex(c),
-    this.chunkSize = 2 * biHighIndex(this.m),
-    this.radix = 16,
-    this.barrett = new BarrettMu(this.m)
-}
-// 。。。。此处省略几百行(为RSA加密过程)需要扣取
+# 网易云音乐下载
+截止2021.8.29有效  
+
+## 使用方法
+1. 安装crypto-js等依赖  
+```
+npm install
+```
+2. 运行main.py
+```
+python main.py
+```
+
+
+## 网易云加密的核心代码如下
+使用AES/CBC加密歌曲id等信息  
+使用RSA加密AES的密钥  
+
+```
 /* 核心加密过程从此处开始 */
 !function() {
     function a(a) {
@@ -55,18 +63,7 @@ function RSAKeyPair(a, b, c) {
     asrsea = d,
     ecnonasr = e
 }();
+```
 
-function get_params(ids) {
-    var params = `{"ids":"${ids}","level":"standard","encodeType":"aac","csrf_token":""}","csrf_token":""}`;
-    var result = asrsea(params, "010001", "00e0b509f6259df8642dbc35662901477df22677ec152b5ff68ace615bb7b725152b3ab17a876aea8a5aa76d2e417629ec4ee341f56135fccf695280104e0312ecbda92557c93870114af6c9d05c4f7f0c3685b7a46bee255932575cce10b424d813cfe4875d3e82047b97ddef52741d546b8e289dc6935b3ece0462db0a22b8e7", "0CoJUm6Qyw8W8jud");
-    return result;
-}
-// 导出get_params方便server.js使用
-module.exports = {
-    get_params
-}
-
-// var ids = "[1357850926,492144016,415090367]";
-// var result = get_params(ids);
-// console.log(result);
-/* 请求接口https://music.163.com/weapi/song/enhance/player/url/v1 */
+## 其他
+分别使用`execjs`和`express`搭建服务两种方法运行js代码，生成所需参数给python使用。
