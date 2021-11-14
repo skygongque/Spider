@@ -18,12 +18,7 @@ https://cool.bilibili.com/square/video
 
 ![image-20211114151509685](assets/readme/image-20211114151509685.png)
 
-B站的这个素材库平台（https://cool.bilibili.com/square/video）就有相应的素材如：
-
-[nice](https://i0.hdslb.com/bfs/creative/ec742c73f1b0ce5bce3dfb95b25536bd892fbfdd.mp4)  
-[黑人问号](https://i0.hdslb.com/bfs/creative/0fe895398f62642d3623ec31bb90f2d43214a79b.mp4)  
-[土拨鼠呐喊](https://i0.hdslb.com/bfs/creative/ec8e6bc5f90224e249f57ab25f898771aaada90d.mp4)  
-
+B站的这个素材库平台（https://cool.bilibili.com/square/video）就有相应的素材
 如果在适当的添加素材就可以提升自己作品的**逼格**。
 
 ![image-20211114151648829](assets/readme/image-20211114151648829.png)
