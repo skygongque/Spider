@@ -1,18 +1,13 @@
-# 微博模型登录
-
+## 介绍
 对于爬取少量的微博信息自己手动登录再copy一下cookie是最简单的方式
 而对于大规模的爬取，需要大量账号的登录，手动登录费时费力，模拟登录就有它的重要意义
 一般的做法是大量账号的模拟登录并保存cookie形成cookie池，提供爬虫使用
 
-RSA/PKCS1_v1_5
-用python的pycryptodome或rsa库都可以实现
-下载验证码图片手动输入结果（若有接码平台或机器学习训练的模型可以接入）
-
-
+## 模拟登录新浪微博
 代码参考https://github.com/CharlesPikachu/DecryptLogin/blob/master/DecryptLogin/platforms/weibo.py
 通过新浪通行证的登录来登录微博https://login.sina.com.cn/signup/signin.php
 
-# 登录过程
+## 登录过程
 1.预登录，向prelogin_url(https://login.sina.com.cn/sso/prelogin.php)发起get请求得到rsa加密的参数
     该请求的核心参数
     su  为用户名的base64加密
@@ -25,11 +20,14 @@ RSA/PKCS1_v1_5
     servertime 预登录返回
     nonce 预登录返回
     rsakv 预登录返回
-    sp servertime + '\t' +nonce +'\n'+ password 这一串字符（如图）的rsa加密
+    sp servertime + '\t' +nonce +'\n'+ password 这一串字符的rsa加密
         rsa加密的modules是与请求返回的pubkey,exponent是"10001"（二进制），用PKCS1_v1_5方式填充
-        rsa的加密可以用 python的RSA库模拟 也可用pycryptodome库模拟，选择PKCS1_v1_5即可
-
-
+        rsa的加密可以用 python的rsa库模拟 也可用pycryptodome库模拟，选择PKCS1_v1_5即可
 
 3.请求login_url(https://passport.weibo.com/wbsso/login)
     需要携带的核心参数ticket, ssosavestate，均为post请求的返回值
+
+## 有验证码的情况
+
+[微博验证码识别](https://github.com/skygongque/captcha-weibo)  
+> 目前还需要手机短信验证或手机app扫码验证暂时失效

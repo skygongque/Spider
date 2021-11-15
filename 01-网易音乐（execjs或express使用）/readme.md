@@ -1,6 +1,10 @@
 # 网易云音乐下载
 截止2021.8.29有效  
 
+## 特点
+
+分别使用`execjs`和`express`搭建服务两种方法运行js代码，生成所需参数给python使用。
+
 ## 使用方法
 1. 安装crypto-js等依赖  
 ```
@@ -52,7 +56,7 @@ python main.py
           , i = a(16);
         return h.encText = b(d, g),//"0CoJUm6Qyw8W8jud" 为密钥的AES 加密 歌曲的id等信息
         h.encText = b(h.encText, i),//函数a 产生的16位字符为密钥的AES 二次加密 歌曲的id等信息
-        h.encSecKey = c(i, e, f),//ras 加密a 产生的16位字符(即二次AES加密的密钥)
+        h.encSecKey = c(i, e, f),//rsa 加密a 产生的16位字符(即二次AES加密的密钥)
         h//return 后逗号隔开顺序执行，最后只返回最后一个逗号后内容
     }
     function e(a, b, d, e) {
@@ -65,5 +69,3 @@ python main.py
 }();
 ```
 
-## 其他
-分别使用`execjs`和`express`搭建服务两种方法运行js代码，生成所需参数给python使用。
