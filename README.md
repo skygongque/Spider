@@ -96,6 +96,9 @@ opencv-python 识别滑块验证码的缺口识别成功率约 60-70%
 ## 百度翻译
 [百度翻译](./19-百度翻译(自研签名算法%20直接扣代码)/readme.md)  
 
+## 百度登录RSA免扣调用实战记录
+[百度登录RSA免扣调用实战记录](./21-RPC百度登录免扣实现RSA实战记录/clients/readme.md)  
+
 > 文章可能首次发表于吾爱破解论坛，以下账户也是本人  
 > https://www.52pojie.cn/home.php?mod=space&uid=965057
 
