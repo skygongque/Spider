@@ -24,7 +24,7 @@ aHR0cHM6Ly93d3cubXBzLmdvdi5jbi9uMjI1NDA5OC9uNDkwNDM1Mi9pbmRleF8zNDk3MzQxXzc0Lmh0
 内容类似[第二次521](./original.js)  
 使用的obfuscator混淆，[用AST还原混淆后](./decrypt.js)  
 
-这段代码的功能时生成真正可以使用的cookie `__jsl_clearance_s`
+这段代码的功能是生成真正可以使用的cookie `__jsl_clearance_s`
 可以发现检测了userAgent,_phantom,Headless等，检测的东西还是比较少的，直接补上以下头部就可以使用了。
 
 生成的cookie保存在假的document.cookie中。
