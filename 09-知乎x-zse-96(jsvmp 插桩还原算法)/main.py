@@ -39,20 +39,13 @@ def get_x_zse_96(source):
             def m4(a, b, c): return (a | (b << 8)) | (c << 16)
             if p == 1:
                 m = m1(a, b, c)
-                result_arr += [f_str[m % 64],
-                               f_str[(m >> 6) % 64], f_str[(m >> 12) % 64], f_str[(m >> 18) % 64]]
             elif p == 2:
-                m = m2(a, b, c)
-                result_arr += [f_str[m % 64],
-                               f_str[(m >> 6) % 64], f_str[(m >> 12) % 64], f_str[(m >> 18) % 64]]
+                m = m2(a, b, c) 
             elif p == 3:
                 m = m3(a, b, c)
-                result_arr += [f_str[m % 64],
-                               f_str[(m >> 6) % 64], f_str[(m >> 12) % 64], f_str[(m >> 18) % 64]]
             else:
                 m = m4(a, b, c)
-                result_arr += [f_str[m % 64],
-                               f_str[(m >> 6) % 64], f_str[(m >> 12) % 64], f_str[(m >> 18) % 64]]
+            result_arr += [f_str[m % 64], f_str[(m >> 6) % 64], f_str[(m >> 12) % 64], f_str[(m >> 18) % 64]]
     return "".join(result_arr)
 
 
