@@ -19,6 +19,11 @@ RSA/PKCS1_v1_5
 下载验证码图片手动输入结果 可以接入深度学习的[验证码识别模型](https://github.com/skygongque/captcha-weibo)准确率98%以上  
 ## [微博图片批量下载](./04-微博图片/readme.md)
 用asyncio + aiohttp异步下载图片  
+
+## 知乎x-zse-96(jsvmp 插桩还原算法)
+
+md5 + 位运算 索引固定字符串
+
 ## [抖音web signature](https://github.com/skygongque/douyin_signature)
 
 ~~目前官方自己的**web端**也无法访问用户主页，无法得到tac参数，**所以该方法已经失效**，可以尝试逆向抖音的app。~~
