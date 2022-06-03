@@ -90,6 +90,10 @@ opencv-python 识别滑块验证码的缺口识别成功率约 60-70%
 [安装frida环境](./08-豆瓣app%20（Frida%20hook实战）/installFrida.md)   
 [豆瓣app _sig 分析](./08-豆瓣app%20（Frida%20hook实战）/readme.md)    
 
+## [懒人听书app](./10-懒人听书APP（MD5签名）/readme.md)
+> md5 哈希
+> frida hook 简单使用 
+
 ## 猫眼电影字体反爬
 [猫眼电影字体反爬](https://github.com/skygongque/knn-font)  
 使用knn（k近邻算法）  
