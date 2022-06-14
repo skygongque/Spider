@@ -68,4 +68,11 @@ python main.py
     ecnonasr = e
 }();
 ```
+## 解决execjs经典的 gbk报错问题
+```
+import subprocess
+from functools import partial
 
+subprocess.Popen = partial(subprocess.Popen, encoding="utf-8")
+import execjs
+```
