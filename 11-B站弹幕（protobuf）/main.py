@@ -1,7 +1,8 @@
+import json
 import requests
 from feed_pb2 import Feed
 from google.protobuf.json_format import MessageToDict
-
+# import blackboxprotobuf
 
 def start_requests():
     cookies = {
@@ -56,12 +57,24 @@ def start_requests():
     }
     response = requests.get('https://api.bilibili.com/x/v2/dm/web/seg.so', params=params, cookies=cookies,
                             headers=headers)
+    # 1. 调用proto文件编译的py文件进行反序列话
     info = Feed()
     info.ParseFromString(response.content)
     _data = MessageToDict(info, preserving_proto_field_name=True)
     messages = _data.get("message") or []
     for message in messages:
         print(message)
+
+    # 2. 调用blackboxprotobuf库
+    # message,typedef = blackboxprotobuf.protobuf_to_json(response.content)
+    # message_json = json.loads(message)
+    # for each in message_json['1']:
+    #     print(each['8'],each["7"])
+    # print(message_json['1'])
+    # print(typedef)
+
+
+
 
 
 if __name__ == '__main__':
