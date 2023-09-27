@@ -1,0 +1,5 @@
+numpy==1.23.2
+pandas==1.4.4
+PyExecJS==1.5.1
+requests==2.23.0
+tqdm==4.64.1

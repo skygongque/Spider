@@ -3,22 +3,33 @@ import base64
 import hashlib
 import json
 import requests
-import pymongo
+# import pymongo
 import time
 from requests import exceptions
+import pandas as pd
+
 
 # 连接数据库
-client = pymongo.MongoClient()
-db = client['Netease_2']
+# client = pymongo.MongoClient()
+# db = client['Netease_2']
  
-def save_to_mongo(data):
-    """ 存入mongodb数据库 """
-    # 按commentId更新
-    if db['comments'].update({'commentId': data['commentId']}, {'$set': data}, True):
-        print('Saved to Mongo', data["nickname"],data["content"])
-    else:
-        print('Saved to Mongo Failed', data['commentId'])
+# def save_to_mongo(data):
+#     """ 存入mongodb数据库 """
+#     # 按commentId更新
+#     if db['comments'].update({'commentId': data['commentId']}, {'$set': data}, True):
+#         print('Saved to Mongo', data["nickname"],data["content"])
+#     else:
+#         print('Saved to Mongo Failed', data['commentId'])
  
+
+def save_csv(data_list):
+    df = pd.DataFrame(data_list)
+    df.to_csv('result.csv')
+
+def save_excel(data_list):
+    df = pd.DataFrame(data_list)
+    df.to_excel('result4.xlsx')
+
 class Netease:
     def __init__(self):
         self.key1 = b'0CoJUm6Qyw8W8jud'
@@ -38,6 +49,7 @@ class Netease:
         }
         self.session = requests.Session()
         self.session.headers.update(self.headers)
+        self.all_data_list = []
  
     def _encrypt(self,data):
         """ 两次aes加密 """
@@ -116,8 +128,8 @@ class Netease:
             for comment in comments:
                 data = self.parse_each_comment(comment)
                 data['song_id'] = song_id
-                save_to_mongo(data)
-            time.sleep(3)
+                self.all_data_list.append(data)
+            time.sleep(1)
             if not more:
                 break
  
@@ -142,23 +154,24 @@ class Netease:
         # self.login('','')
          
         # 抓取指定song_id下的最多约2000条评论
-        song_id = 436514312
+        song_id = 1455658167
         for page in range(1,101):
+            print('page',page)
             res_json = self.get_one_page(song_id,page)
             more = res_json['more']
             comments = res_json['comments']
             for comment in comments:
                 data = self.parse_each_comment(comment)
                 data['song_id'] = song_id
-                save_to_mongo(data)
-            time.sleep(3)
+                self.all_data_list.append(data)
+            time.sleep(1)
             if not more:
-                if page <100:
-                    """需要抓取最后50页 """
-                    total = self.get_one_page(song_id,1)['total']
-                    self.get_last_50_comments(song_id,total)
+                # if page <100:
+                #     """需要抓取最后50页 """
+                #     total = self.get_one_page(song_id,1)['total']
+                #     self.get_last_50_comments(song_id,total)
                 break
- 
+        save_excel(self.all_data_list)
  
 if __name__ == "__main__":
     t = Netease()

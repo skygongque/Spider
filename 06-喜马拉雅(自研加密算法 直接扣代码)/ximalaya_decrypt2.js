@@ -184,7 +184,8 @@ function get_whole_url(info) {
     // console.log(address);
     var sign_etc = Tt(info.ep);
     // console.log(sign_etc);
-    var whole_address1 = "".concat("https://audiopay.cos.xmcdn.com", "/download/").concat("1.0.0").concat(address)
+    var whole_address1 = "".concat("https://audiopay.cos.tx.xmcdn.com", "/download/").concat("1.0.0").concat(address)
+    // var whole_address1 = "".concat("https://audiopay.cos.xmcdn.com", "/download/").concat("1.0.0").concat(address)
     var whole_address = "".concat(whole_address1, "?").concat(`sign=${sign_etc.sign}&buy_key=${sign_etc.buy_key}&token=${sign_etc.token}&timestamp=${sign_etc.timestamp}&duration=${duration}`);
     // console.log(whole_address);
     return whole_address;
