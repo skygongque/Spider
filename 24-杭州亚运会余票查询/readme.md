@@ -13,11 +13,18 @@
 ```
 pip install -r requirements.txt
 ```
+(可选)安装node.js环境
 
 ## 运行
+纯python实现版本
+```
+python ticket_hangzhou2.py
+```
+execjs 运行js版本
 ```
 python ticket_hangzhou.py
 ```
+
 运行后会生成 `余票情况.xlsx` 筛选`left_num` 大于1的项目即为有余票的项目
 
 # 不准确的情况

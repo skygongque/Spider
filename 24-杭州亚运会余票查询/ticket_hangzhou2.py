@@ -1,22 +1,15 @@
-import execjs
-from functools import partial
-import subprocess
 import requests
 import time
 import json
 import pandas as pd 
 import numpy as np 
 from tqdm import tqdm
+import hashlib
+import copy
 
 """ 
-execjs 运行js版本
+纯python版本
 """
-
-subprocess.Popen = partial(subprocess.Popen, encoding="utf-8")
-with open('sign.js','r') as f:
-    jscode = f.read()
-
-ctx = execjs.compile(jscode) 
 
 def get_index(page):
     params = {
@@ -93,9 +86,16 @@ def parse(res_json):
 
 def get_ts_sign(u):
     """ 签名 """
-    u = json.dumps(u)
-    ts = int(time.time() * 1000) -91
-    sign = ctx.call('get_sign',ts,u)
+    ts = str(int(time.time() * 1000) -91)
+    dic = copy.deepcopy(u)
+    myKeys = list(dic.keys())
+    myKeys.sort()
+    sorted_params = {i: dic[i] for i in myKeys}
+    sorted_params['timestamp'] = ts
+    dic_str = json.dumps(sorted_params,separators=(',', ':'))
+    m = hashlib.md5()
+    m.update(dic_str.encode('utf-8'))
+    sign = m.hexdigest()
     return ts,sign
 
 def main():
@@ -119,8 +119,8 @@ def main():
         time.sleep(1)
         # break
     df = pd.DataFrame(result)
-    df.to_excel('余票情况.xlsx')
-    print('余票情况已存入 余票情况.xlsx')
+    df.to_excel('余票情况2.xlsx')
+    print('余票情况已存入 余票情况2.xlsx')
 
 
 if __name__ == "__main__":
